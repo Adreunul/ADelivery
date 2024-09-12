@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ConfirmOrderActivityNew">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_shadow"
+        android:alpha="0.33"/>
+
+    <LinearLayout
+        android:id="@+id/logo_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="68dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/restaurant_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADelivery"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="24dp"
+        android:layout_marginBottom="-300dp"
+        >
+        <LinearLayout
+            android:id="@+id/card_content"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:alpha="0">
+            <TextView
+                android:id="@+id/txtPrimire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmă comanda"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:textSize="32sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Te rugăm să introduci următoarele date pentru a trimite comanda: "
+                android:textColor="@color/my_primary"
+                android:alpha="0.85"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/lblAdresa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:alpha="0.85"
+                    android:text="Adresa"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtPreiaAdresa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:alpha="0.85"
+                    android:text="Preia din adresa salvată"
+                    android:textColor="@color/my_primary"
+                    android:onClick="takeSavedAddress"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtAdresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Apasă pentru a introduce adresa"
+                android:onClick="pickAddress"/>
+
+            <TextView
+                android:id="@+id/lblDetalii"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.85"
+                android:text="Detalii"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtDetalii"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bloc, Scara, Interfon, Etaj, Apartament" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/lblMetodaPlata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.85"
+                android:text="Metoda de plată"
+                android:textColor="@color/black"
+                tools:ignore="InvalidId" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupPlata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/radioCash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cash"
+                    android:onClick="payByCash"/>
+                <RadioButton
+                    android:id="@+id/radioCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Card"
+                    android:onClick="payByCard"/>
+        </RadioGroup>
+
+
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="165dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:onClick="attemptPlaceOrder"
+                android:text="Plasează comanda"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/txtInapoi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:alpha="0.75"
+                android:onClick="startConfirmCartActivity"
+                android:text="Inapoi"
+                android:textColor="@color/my_primary"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/card_height"
+                android:layout_width="wrap_content"
+                android:layout_height="295dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

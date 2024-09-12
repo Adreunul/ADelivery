@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".SelectPreferencesActivityNew">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_shadow"
+        android:alpha="0.33"/>
+
+    <LinearLayout
+        android:id="@+id/logo_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="68dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/restaurant_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADelivery"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="24dp"
+        android:layout_marginBottom="-200dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/card_content"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:alpha="0">
+            <TextView
+                android:id="@+id/txtPrimire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Lasagna"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:textSize="24sp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Te rugăm să selectezi preferintele"
+                android:textColor="@color/my_primary"
+                android:alpha="0.85"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/black" />
+
+            <!-- End ScrollView -->
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="583dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/preferenceList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:alpha="1"
+                    android:orientation="vertical">
+
+
+
+
+                </LinearLayout>
+            </ScrollView>
+
+
+
+
+            <Button
+                android:id="@+id/btnConfirmare"
+                android:layout_width="wrap_content"
+                android:layout_height="68dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:text="Confirmă"
+                android:onClick="confirmSelection"/>
+
+
+
+            <View
+                android:id="@+id/card_height"
+                android:layout_width="wrap_content"
+                android:layout_height="212dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainMenuActivityNew">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_shadow"
+        android:alpha="0.33"/>
+
+    <LinearLayout
+        android:id="@+id/logo_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="68dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/restaurant_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADelivery"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="24dp"
+        android:layout_marginBottom="-600dp"
+        >
+        <LinearLayout
+            android:id="@+id/card_content"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:alpha="0">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_order"
+                android:layout_width="135dp"
+                android:layout_height="90dp"
+                android:text=""
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                app:strokeColor="@color/black"
+                app:strokeWidth="0.75dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="135dp"
+                android:layout_height="90dp"
+                android:text="Vezi detalii cont"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="startManageAccountActivity"
+                app:strokeColor="@color/black"
+                app:strokeWidth="0.75dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:id="@+id/log_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log Out"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/my_primary"
+                android:alpha="0.75"
+                android:onClick="startLoginActivity"/>
+
+            <View
+                android:id="@+id/card_height"
+                android:layout_width="wrap_content"
+                android:layout_height="590dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

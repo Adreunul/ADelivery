@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ConfirmCartActivityNew">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_shadow"
+        android:alpha="0.33"/>
+
+    <LinearLayout
+        android:id="@+id/logo_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="68dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/restaurant_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADelivery"
+            android:textSize="36sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="24dp"
+        android:layout_marginBottom="-200dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/card_content"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:alpha="0">
+            <TextView
+                android:id="@+id/txtPrimire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Coșul tău"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:textSize="24sp"/>
+
+
+            <TextView
+                android:id="@+id/lblHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Te rugăm să confirmi comanda"
+                android:textColor="@color/my_primary"
+                android:alpha="0.85"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/black" />
+
+            <!-- End ScrollView -->
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="531dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/productList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:alpha="1"
+                    android:orientation="vertical">
+
+
+
+
+                </LinearLayout>
+            </ScrollView>
+
+
+            <Button
+                android:id="@+id/btnMentiune"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mențiune"
+                android:textColor="@color/black"
+                android:onClick="addMention"
+                android:layout_gravity="center_horizontal">
+            </Button>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp">
+
+            </View>
+
+
+            <Button
+                android:id="@+id/btnConfirmare"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="startConfirmOrderActivity"
+                android:text="Confirmă"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtInapoi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inapoi"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/my_primary"
+                android:alpha="0.75"
+                android:onClick="startSelectProductsActivity"/>
+
+            <View
+                android:id="@+id/card_height"
+                android:layout_width="wrap_content"
+                android:layout_height="190dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
