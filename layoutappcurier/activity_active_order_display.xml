@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ActiveOrderActivity">
+
+    <!-- Order ID Label -->
+    <TextView
+        android:id="@+id/lbl_order_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID Comanda"
+        android:textSize="20sp" />
+
+    <!-- Order ID -->
+    <TextView
+        android:id="@+id/txt_order_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/empty"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Client Name Label -->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_client_name"
+        android:textSize="20sp" />
+
+    <!-- Client Name -->
+    <TextView
+        android:id="@+id/txt_client_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/empty"
+        android:textSize="14sp" />
+
+    <!-- Client Address Label -->
+    <TextView
+        android:id="@+id/lbl_client_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showAddress"
+        android:text="@string/lbl_client_address"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Client Address -->
+    <TextView
+        android:id="@+id/txt_client_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:minWidth="64dp"
+        android:onClick="showAddress"
+        android:text="@string/empty"
+        android:textSize="14sp" />
+
+    <!-- Restaurant Name Label -->
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_restaurant_name"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Restaurant Name -->
+    <TextView
+        android:id="@+id/txt_restaurant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/empty"
+        android:textSize="14sp" />
+
+    <!-- Restaurant Address Label -->
+    <TextView
+        android:id="@+id/lbl_restaurant_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showAddress"
+        android:text="@string/lbl_restaurant_address"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Restaurant Address -->
+    <TextView
+        android:id="@+id/txt_restaurant_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:onClick="showAddress"
+        android:text="@string/empty"
+        android:textSize="14sp" />
+
+    <!-- Price Label -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pret:"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/empty"
+        android:textSize="14sp" />
+
+    <!-- How to Confirm Text -->
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_how_to_confirm"
+        android:textSize="16sp"
+        android:layout_marginTop="32dp" />
+
+    <!-- Confirmation ID Input -->
+    <EditText
+        android:id="@+id/txt_confirm_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="0000"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/hint_confirm_delivery"
+        android:layout_marginTop="16dp"
+        tools:ignore="LabelFor" />
+
+    <!-- Confirm Delivery Button -->
+    <Button
+        android:id="@+id/btn_confirm_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="checkPin"
+        android:text="@string/btn_confirm_text"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
