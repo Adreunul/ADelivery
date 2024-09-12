@@ -1,1 +1,4 @@
-# ADelivery---aplicatie-licenta
+# ADelivery-aplicatie_licenta
+
+Pentru lucrarea de licenta am ales sa elaborez un sistem de aplicatii ce va servi pentru plasarea de comenzi de mancare online de la restaurante partenere(Modelul Glovo, BoltFood etc). Sistemul este compus din 3 aplicatii,
+2 Android pentru utilizatorii clienti si curieri si 1 Desktop pentru utilizatorii restaurant. Am folosit Android Studio pentru realizarea aplicatiilor Android, limbajul de programare Java (fisierele licentaappclient si licentaappcurier) si limbajul de marcare XML pentru interfata grafica ale celor 2 aplicatii(layoutappclient si layoutappcurier) si pentru animatiile din interfata grafica(animappclient) a aplicatiei pentru clienti. Pentru aplicatia Desktop(licentaapprestaurant) am folosit limbajul Java si framework-ul Java Swing. Pentru baza de date am folosit serviciile Firebase.
